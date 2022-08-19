@@ -1,11 +1,102 @@
 body {
-    background: rgb(194, 134, 224);
+    background:  linear-gradient(to right, #1c92d2, #f2fcfe);
     color: rgb(12, 12, 12);
   }
 
   #search-location {
-    color:  white;
-    background-color: blue;
+    background: darkblue;
+    color: rgb(241, 235, 235);
+    border: 5px solid  darkblue;
+    border-radius: 10px;}
 
+    #description-element{
+    font-size: 20px;
+    color: darkblue;
+    font-weight: 600;
+    margin: 0 auto;}
     
+
+
+#days {
+    color: white
+}
+
+#humidity {
+    margin: 0px auto;
+    color: darkblue;
+   
+
+}
+li{
+    text-decoration: none;
+    display: block;
+
+
+}
+#wind {
+    margin: 0px auto;
+    color: darkblue;
+ 
+
+}
+h3 {
+    font-size: 20px;
+    color: white;
+    margin: 20px auto;
+    
+
+}
+#city {
+    color: darkblue;
+}
+
+#temp {
+    font-size: 30px;
+    font-weight: bolder;
+    color: darkblue;
+    margin: 20px auto;
+ 
+    max-width: 300px;
+}
+  
+#submit {
+    background: rgb(202, 196, 196);
+    color: black;
+    border: 1px solid  black;
+}
+
+
+  form {
+    margin: 0 auto;
+    padding: 30px 10px;
+  }
+ 
+.degree {font-size: 20px;
+    font-weight: bolder;
+    color: darkblue;
+    margin: 20px auto;
+ 
+    max-width: 300px;
+
+}
+#imageweather {
+margin: 0 auto;
+padding-bottom: 20px;
+max-width: 300px;
+
+}
+
+  .card-img-top {
+    width: 80px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    
+  }
+  footer {
+    margin: 0 auto;
+    padding: 20px 30px;
+    font-family: 'Courier New, Courier, monospace';
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
   }
