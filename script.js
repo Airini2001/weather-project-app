@@ -23,6 +23,18 @@ function search(city) {
     let inputcity = response.data.name;
     let cityElement = document.querySelector("#city");
     cityElement.innerHTML = inputcity;
+
+    let description = document.querySelector("#description-element");
+description.innerHTML = response.data.weather[0].description;
+
+let humidity = Math.round(response.data.wind.speed);
+let humidityelement = document.querySelector("#humidity");
+humidityelement.innerHTML = `Humidity: ${humidity}%`;
+
+let wind = Math.round(response.data.wind.gust);
+let windelement = document.querySelector("#wind");
+windelement.innerHTML = `Wind: ${wind}km/h`;
+
   }
   
   let now = new Date();
@@ -93,5 +105,19 @@ function search(city) {
     let temperature = Math.round(response.data.main.temp);
     let templocation = document.querySelector("#temp");
     templocation.innerHTML = `${temperature}°C`;
+
+let description=document.querySelector("#description-element");
+description.innerHTML=response.data.weather[0].description;
+
+
+let humidity = Math.round(response.data.wind.speed);
+let humidityelement = document.querySelector("#humidity");
+humidityelement.innerHTML = `Humidity ${humidity}%`;
+
+let wind = Math.round(response.data.wind.gust);
+let windelement = document.querySelector("#wind");
+windelement.innerHTML = `Wind: ${wind} km/h`;
+
   }
+  
   
