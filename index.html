@@ -16,26 +16,37 @@
 
       <form id="search-form">
       <input type="text" id="text-input" placeholder="Enter the city"/> 
-      <input type="submit"  value="Search"/>
+      <input type="submit" id="submit" value="Search"/>
+      <img src="image/location.png" width="30" alt="loc">
+      
       <input type="submit" id="search-location" value="Location"/>
       </form>
       <br/>
       <h1 id="city">
         Odessa
       </h1>
+      <span id="description-element">Clear</span>
+      <br/>
+      <img src="image/shine.png" class="img" id="imageweather" width="50" alt="sun">
+   
         <span class="temperature" id="temp">+30</span>
         <span class="degree">
           <a href="#" id="celsius-link">°C</a> |
           <a href="#" id="fahrenheit-link">°F</a>
         </span>
+
+<li><span id="humidity">Humidity: 67% </span></li>
+
+<li><span id="wind">Wind: 67km/h</span></li>
+
         <h3>time</h3>
         <br/>
-    <p>Next 5 day</p>
+   <strong><p id="days">Next 5 day</p></strong> 
     <hr/>
     <div class="card-group">
      
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="image/shine.png" width="20" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Sun</h5>
           <p class="card-text">+25</p>
@@ -43,7 +54,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="image/shine.png" width="20" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Mon</h5>
           <p class="card-text">+25</p>
@@ -51,7 +62,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="image/shine.png" width="20" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Tue</h5>
           <p class="card-text">+25</p>
@@ -59,7 +70,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="image/shine.png" width="20" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Wed</h5>
           <p class="card-text">+25</p>
@@ -67,14 +78,16 @@
         </div>
       </div>
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="image/shine.png" width="20" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Thu</h5>
           <p class="card-text">+25</p>
           <p class="card-text"><small class="text-muted">Sunny</small></p>
         </div>
       </div>
+    
   </div>
+  <footer> Open-source code by <a href="https://github.com/Airini2001" target="_blank">Irina Mitrofanova</a></footer>
   <script src="script.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
