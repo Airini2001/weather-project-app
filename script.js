@@ -15,28 +15,57 @@ function search(city) {
   
   function showtemperature(response) {
     console.log(response.data);
-  
-    let temperature = Math.round(response.data.main.temp);
-    let tempnow = document.querySelector("#temp");
-    tempnow.innerHTML = `${temperature}°C`;
-  
-    let inputcity = response.data.name;
-    let cityElement = document.querySelector("#city");
-    cityElement.innerHTML = inputcity;
 
-    let description = document.querySelector("#description-element");
+celsiusTemperature = response.data.main.temp;
+let tempelement = document.querySelector("#temp");
+tempelement.innerHTML = Math.round(celsiusTemperature);
+  
+let inputcity = response.data.name;
+let cityElement = document.querySelector("#city");
+cityElement.innerHTML = inputcity;
+
+let description = document.querySelector("#description-element");
 description.innerHTML = response.data.weather[0].description;
 
-let humidity = Math.round(response.data.wind.speed);
+let humidity = Math.round(response.data.main.humidity);
 let humidityelement = document.querySelector("#humidity");
-humidityelement.innerHTML = `Humidity: ${humidity}%`;
+humidityelement.innerHTML = humidity ;
 
-let wind = Math.round(response.data.wind.gust);
+let wind = Math.round(response.data.wind.speed);
 let windelement = document.querySelector("#wind");
-windelement.innerHTML = `Wind: ${wind}km/h`;
+windelement.innerHTML = wind;
+
+let iconweather = document.querySelector("#imageweather");
+iconweather.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
   }
   
+
+  function displayCelsiusTemperature(event) {
+    event.preventDefault();
+    
+    let celsiusElement = document.querySelector("#temp");
+    celsiusElement.innerHTML = Math.round(celsiusTemperature);
+  }
+  let celsius = document.querySelector("#celsius-link");
+  celsius.addEventListener("click", displayCelsiusTemperature);
+
+  function displayFahrenheitTemperature(event) {
+    event.preventDefault();
+    
+  celsius.classList.remove("active");
+  farinh.classList.add("active");
+    let fahrenElement = document.querySelector("#temp");
+    let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+    fahrenElement.innerHTML = Math.round(fahrenheitTemperature);
+  }
+
+  let farinh = document.querySelector("#fahrenheit-link");
+  farinh.addEventListener("click", displayFahrenheitTemperature);
+  
+  let fahrenheiTemperature= null;
+
+
   let now = new Date();
   let h3 = document.querySelector("h3");
   
@@ -61,24 +90,8 @@ windelement.innerHTML = `Wind: ${wind}km/h`;
   let day = days[now.getDay()];
   
   h3.innerHTML = `${day} ${hour}:${min}`;
+
   
-  function tempc(event) {
-    event.preventDefault();
-  
-    let templink = document.querySelector("#temp");
-    templink.innerHTML = `66`;
-  }
-  let farinh = document.querySelector("#fahrenheit-link");
-  farinh.addEventListener("click", tempc);
-  
-  function tempf(event) {
-    event.preventDefault();
-  
-    let templink = document.querySelector("#temp");
-    templink.innerHTML = `19`;
-  }
-  let cels = document.querySelector("#celsius-link");
-  cels.addEventListener("click", tempf);
   
   function showPosition(position) {
     let lat = position.coords.latitude;
@@ -86,7 +99,7 @@ windelement.innerHTML = `Wind: ${wind}km/h`;
     let apiKey = "765b9f49bb5f837e1b35ec83b522ea28";
     let point = "https://api.openweathermap.org/data/2.5/weather";
     let url = `${point}?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-    axios.get(url).then(showWeather);
+    axios.get(url).then(showtemperature);
   }
   function getCurrentlocation(event) {
     event.preventDefault();
@@ -96,28 +109,7 @@ windelement.innerHTML = `Wind: ${wind}km/h`;
   let currentbutton = document.querySelector("#search-location");
   currentbutton.addEventListener("click", getCurrentlocation);
   
-  function showWeather(response) {
-    console.log(response);
-    let localcity = response.data.name;
-    let elementcity = document.querySelector("#city");
-    elementcity.innerHTML = localcity;
   
-    let temperature = Math.round(response.data.main.temp);
-    let templocation = document.querySelector("#temp");
-    templocation.innerHTML = `${temperature}°C`;
-
-let description=document.querySelector("#description-element");
-description.innerHTML=response.data.weather[0].description;
-
-
-let humidity = Math.round(response.data.wind.speed);
-let humidityelement = document.querySelector("#humidity");
-humidityelement.innerHTML = `Humidity ${humidity}%`;
-
-let wind = Math.round(response.data.wind.gust);
-let windelement = document.querySelector("#wind");
-windelement.innerHTML = `Wind: ${wind} km/h`;
-
-  }
   
+  search("Odessa");
   
