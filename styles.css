@@ -1,6 +1,7 @@
 body {
     background:  linear-gradient(to right, #1c92d2, #f2fcfe);
     color: rgb(12, 12, 12);
+ 
   }
 
   #search-location {
@@ -12,43 +13,45 @@ body {
     #description-element{
     font-size: 20px;
     color: darkblue;
-    font-weight: 600;
-    margin: 0 auto;}
+    font-weight: 600px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    text-transform: capitalize;
+  }
     
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
 
 
+}
 #days {
-    color: white
+    color: white;
+  
 }
 
-#humidity {
-    margin: 0px auto;
-    color: darkblue;
-   
 
-}
-li{
+li {
     text-decoration: none;
     display: block;
-
-
-}
-#wind {
-    margin: 0px auto;
-    color: darkblue;
- 
-
+    position: relative;
+    left: 250px;
+    top: -70px;
 }
 h3 {
     font-size: 20px;
     color: white;
-    margin: 20px auto;
-    
+    margin: 0 auto;
+    padding: 10px 0px;
 
 }
-#city {
+   
+h1 {
+    margin: 0 auto;
     color: darkblue;
-}
+    
+    }
+
 
 #temp {
     font-size: 30px;
@@ -71,14 +74,8 @@ h3 {
     padding: 30px 10px;
   }
  
-.degree {font-size: 20px;
-    font-weight: bolder;
-    color: darkblue;
-    margin: 20px auto;
- 
-    max-width: 300px;
 
-}
+  
 #imageweather {
 margin: 0 auto;
 padding-bottom: 20px;
@@ -87,16 +84,65 @@ max-width: 300px;
 }
 
   .card-img-top {
-    width: 80px;
+    width: 90px;
     margin: 0 auto;
     padding: 20px 10px;
     
   }
   footer {
-    margin: 0 auto;
-    padding: 20px 30px;
     font-family: 'Courier New, Courier, monospace';
     font-size: 15px;
-    text-align: center;
     font-weight: bold;
+    text-align: center;
+    margin: 15px;
+    max-width: 700px;
+    
   }
+ 
+
+
+.float-left {
+  padding: 10px 20px;
+  margin: 0 auto;
+  max-width: 400px;
+  position: relative;
+  right: 320px;
+
+}
+
+.active {
+  color: darkblue;
+  text-decoration: none;
+  font-weight: bolder;
+  top: -5px;
+  position: relative;
+}
+#celsius-link {
+  text-decoration: none;
+  font-weight: bolder;
+  color: darkblue;
+  position: relative;
+  font-size: 16px;
+  top: -5px;
+  right: 1px;
+
+}
+
+#fahrenheit-link {
+  text-decoration: none;
+  font-weight: bolder;
+  color: black;
+  position: relative;
+  font-size: 16px;
+  top: -5px;
+  right: 1px;
+
+}
+
+
+.weather-app {
+  
+  margin: 0 auto;
+ height: 300px;
+
+}
