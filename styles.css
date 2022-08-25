@@ -26,7 +26,8 @@ body {
 
 }
 #days {
-    color: white;
+    color: rgb(24, 23, 23);
+
   
 }
 
@@ -40,7 +41,7 @@ li {
 }
 h3 {
     font-size: 20px;
-    color: white;
+    color: darkblue;
     margin: 0 auto;
     padding: 10px 0px;
 
@@ -89,18 +90,17 @@ max-width: 300px;
     padding: 20px 10px;
     
   }
-  footer {
-    font-family: 'Courier New, Courier, monospace';
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    margin: 15px;
-    max-width: 700px;
-    
-  }
- 
+  
+   
+footer {
+  
+  font-size: 14px;
+  text-align: center;
+}
 
-
+a {
+  text-decoration: none;
+}
 .float-left {
   padding: 10px 20px;
   margin: 0 auto;
@@ -145,4 +145,17 @@ max-width: 300px;
   margin: 0 auto;
  height: 300px;
 
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forecast-date {
+  font-size: 18px;
+  color: black;
+  font-weight: 500;
+}
+
+.weather-temperature-min{
+  opacity: 0.5;
 }
